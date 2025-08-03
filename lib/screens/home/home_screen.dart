@@ -1,4 +1,5 @@
 import 'package:flutter_admob_/providers/providers.dart';
+import 'package:flutter_admob_/providers/show_ads_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_admob_/screens/ads/full_screen.dart';
@@ -44,9 +45,16 @@ class HomeScreen extends ConsumerWidget {
               ),
               error: (error, stackTrace) => Text("error $error"),
               loading: () => CircularProgressIndicator(),
-            )
+            ),
           ],
         ),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: ref.read(showAdsProvider.notifier).toggleAds,
+        child: ref.watch(showAdsProvider)
+            ? Icon(Icons.remove_circle_outline_rounded)
+            : Icon(Icons.remove_red_eye),
       ),
     );
   }
