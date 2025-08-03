@@ -5,14 +5,17 @@ import 'dart:io';
 import 'package:flutter/widgets.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+//TODO: add prod IDs
 final adBannerId = Platform.isAndroid
     ? "ca-app-pub-3940256099942544/9214589741"
     : "ca-app-pub-3940256099942544/2435281174";
 
+//TODO: add prod IDs
 final adInterstialId = Platform.isAndroid
     ? "ca-app-pub-3940256099942544/1033173712"
     : "ca-app-pub-3940256099942544/4411468910";
 
+//TODO: add prod IDs
 final adRewardId = Platform.isAndroid
     ? 'ca-app-pub-3940256099942544/5224354917'
     : 'ca-app-pub-3940256099942544/1712485313';
